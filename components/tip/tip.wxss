@@ -1,0 +1,11 @@
+.my_tip {
+  position: fixed;
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  padding: 20px;
+  top: -80px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+  transition: all .3s;
+}

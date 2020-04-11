@@ -1,0 +1,54 @@
+<view id="background"></view>
+<view id="content">
+  <view id="image-box" style="height: calc(100% - {{isX ? '180' : '160'}}px)">
+    <!-- <image class="image {{index == 0 ? 'image-show' : ''}}" src="http://up.wawa.fm/15,056c8069d7fd13?width=800" mode="widthFix" />
+    <image class="image {{index == 1 ? 'image-show' : ''}}" src="http://up.wawa.fm/18,0581c201280cf6?width=800" mode="widthFix" />
+    <image class="image {{index == 2 ? 'image-show' : ''}}" src="http://up.wawa.fm/18,06111d18e7209f?width=800" mode="widthFix" /> -->
+    <view class="images" style="{{index == 3 ? 'transform: translateX(-50%); opacity: 0' : ''}}">
+      <view class="image" style="{{index != 0 ? 'height: 100%; border-radius: 10px;' : 'height: 33.33%;'}} filter: blur({{index == 2 || index == 3 ? '10' : '0'}}px);"></view>
+      <view class="image" style="{{index != 0 ? 'height: 100%;' : 'height: 33.33%;'}}"></view>
+      <view class="image" style="{{index != 0 ? 'height: 100%;' : 'height: 33.33%;'}}"></view>
+      <view class="ninecut-line" style="{{index == 1 ? 'transform: scale(1.05)' : ''}}"></view>
+    </view>
+  </view>
+</view>
+<swiper previous-margin="30px" next-margin="30px" duration="300" bindchange="change" style="bottom: {{isX ? '60' : '40'}}px;">
+  <swiper-item>
+    <view class="item">
+      <view class="item-view" bindtap="goTo" data-to="longimg">
+        <view catchtap="goTo" data-to="longimg">拼长图</view>
+        <view catchtap="goTo" data-to="longimg">
+          简而美的拼长图功能，这个是一直以来就想做的，这样就不用再去APP商店下载那些收费或者有水印的长图APP了，nice~
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="item">
+      <view class="item-view" bindtap="goTo" data-to="ninecut">
+        <view catchtap="goTo" data-to="ninecut">切九图</view>
+        <view catchtap="goTo" data-to="ninecut">
+          犹记得科比退役那天，天空下着小雨，点开朋友圈，全是科比背影的九分图，当时就找这种功能的APP但没找到。
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="item">
+      <view class="item-view" bindtap="goTo" data-to="blur">
+        <view catchtap="goTo" data-to="blur">高斯模糊</view>
+        <view catchtap="goTo" data-to="blur">
+          高斯模糊原理是图像与正态分布做卷积，正态分布又叫作高斯分布...（此处省略一万个字）山由老师，讲真的我十分后悔没有好好学好数学。
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="item">
+      <view class="item-view developing" bindtap="developing">
+        <view class="icon icon-plus" catchtap="developing"></view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>
+<tip id="tip"></tip>

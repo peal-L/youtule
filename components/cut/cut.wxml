@@ -1,0 +1,18 @@
+<view class="content {{show ? 'content-show' : ''}}">
+    <view class="cut-area">
+        <movable-area id="fixed-area" style="width: 100%; height: {{height}}px; overflow: hidden; border: 2px solid #fff">
+            <!-- 可移动区域 -->
+            <movable-view direction="all" inertia style="width: {{imgSize.width}}; height: {{imgSize.height}}" bindchange="onMove">
+                <image mode="widthFix" style="width: {{imgSize.width}}; height: {{imgSize.height}}" src="{{img}}" bindload="imgLoad" />
+            </movable-view>
+        </movable-area>
+    </view>
+    <view class="bar" style="padding-bottom: {{25 + bottom}}px">
+        <view class="button" bindtap="cancel">
+            <image mode="widthFix" src="/static/img/icon/cancel.png" />
+        </view>
+        <view class="button" bindtap="check">
+            <image mode="widthFix" src="/static/img/icon/check.png" />
+        </view>
+    </view>
+</view>

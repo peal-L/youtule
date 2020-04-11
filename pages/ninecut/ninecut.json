@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "tip": "/components/tip/tip",
+        "loading": "/components/loading/loading",
+        "cut": "/components/cut/cut"
+    },
+    "navigationBarTitleText": "切九图"
+}

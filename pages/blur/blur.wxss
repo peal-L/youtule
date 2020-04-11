@@ -1,0 +1,125 @@
+page {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-plus {
+    color: #aaa;
+}
+
+.bar {
+    position: fixed;
+    padding: 20px;
+    width: 100%;
+    bottom: 0;
+    background-color: #09b1b9;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    padding: 12px;
+    margin: 0;
+    width: 30%;
+    text-align: center;
+    background-color: #3b7d9c;
+    color: #eee;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+.choose {
+    position: relative;
+    left: -100%;
+    transition: all 0.4s;
+}
+
+.choose_show {
+    left: 0;
+}
+
+.padding {
+    position: relative;
+    left: 100%;
+    transition: Left 0.4s;
+}
+
+.padding_show {
+    left: 0;
+}
+
+.icon-arrow-right2 {
+    transition: all 0.5s;
+}
+
+.canvas {
+    overflow: hidden;
+    width: 100%;
+}
+
+.canvas > image {
+    width: 100%;
+}
+
+#canvas {
+    position: fixed;
+    top: 200%;
+    left: 200%;
+}
+
+.setting {
+    position: fixed;
+    width: calc(100% - 20px);
+    height: auto;
+    margin: 0 10px;
+    bottom: 0;
+    padding: 20px;
+    background-color: #0a5e7a;
+    border-radius: 12px;
+    transform: translateY(0);
+    transition: all 0.4s;
+}
+
+.setting_hide {
+    transform: translateY(120%);
+}
+
+.setting_name {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 22px;
+}
+
+.setting_name>slider {
+    width: calc(100% - 60px);
+    margin-left: 28px;
+    margin-right: 8px;
+}
+
+.cover_all {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.cover_all_show {
+    display: block;
+}
+
+.icon-cog {
+    transition: all 0.4s;
+}

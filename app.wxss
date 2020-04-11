@@ -1,0 +1,24 @@
+@import "/static/icon/icon.wxss";
+
+view {
+  box-sizing: border-box;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.button {
+  padding: 12px;
+  margin: 0 auto;
+  max-width: 160px;
+  text-align: center;
+  background-color: #8a5ee2;
+  color: #eee;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.button:active {
+  opacity: .6;
+}

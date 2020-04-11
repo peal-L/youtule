@@ -1,0 +1,46 @@
+<view class="content">
+
+    <view class="img {{chooseDone ? 'img_hide' : ''}}">
+        <view class="img_item" wx:for="{{imgList}}" style="width: {{imgWH}}; height: {{imgWH}}">
+            <view class="icon icon-minus" bindtap="imgDelete" data-index="{{index}}"></view>
+            <image mode="aspectFill" src="{{item.url}}" data-index="{{index}}" bindload="imgLoad"></image>
+        </view>
+
+        <view class="img_item img_plus" bindtap="imgAdd" wx:if="{{imgList.length < 9}}" style="width: {{imgWH}}; height: {{imgWH}}">
+            <view class="icon icon-plus"></view>
+        </view>
+
+        <!-- 占位 -->
+        <view class="img_item" wx:if="{{imgList.length % 3 == 1}}" style="opacity: 0; width: {{imgWH}}; height: {{imgWH}}"></view>
+    </view>
+
+    <view class="canvas {{chooseDone ? '' : 'canvas_hide'}}">
+        <image wx:for="{{imgList}}" src="{{item.url}}" mode="widthFix" style="margin-top: {{padding[0] && (index != 0 ? padding[0] : 0)}}px"></image>
+    </view>
+</view>
+
+<view class="cover_all {{isSetting ? 'cover_all_show' : ''}}" bindtap="toSetting"></view>
+
+<view class="setting {{isSetting ? '' : 'setting_hide'}}" style="margin-bottom: {{isX ? '115' : '95'}}px">
+    <view class="setting_name">
+        <view class="icon icon-pagebreak"></view>
+        <slider activeColor="#09b1b9" block-size="18" max="60" bindchanging="setPadding" />
+    </view>
+</view>
+
+<view class="bar" style="padding-bottom: {{isX ? '40' : '20'}}px" bindtap="{{isSetting ? 'toSetting' : ''}}">
+    <view class="button choose {{chooseDone ? 'choose_show' : ''}}" bindtap="toChoose">
+        <view class="icon icon-arrow-left2"></view>
+    </view>
+    <view class="button" bindtap="{{chooseDone ? 'saveToAlbum' : 'toPreview'}}">
+        <view class="icon icon-arrow-right2" style="{{chooseDone ? 'transform: rotate(90deg)' : ''}}"></view>
+    </view>
+    <view class="button padding {{chooseDone ? 'padding_show' : ''}}" catchtap="toSetting" style="background-color: {{isSetting ? '#0a5e7a' : ''}}">
+        <view class="icon icon-cog" style="{{isSetting ? 'transform: rotate(180deg)' : ''}}"></view>
+    </view>
+</view>
+
+<canvas id="canvas" canvas-id="my_canvas" style="width: {{minWidth}}px; height: {{canvasHeight}}px"></canvas>
+
+<tip id="tip"></tip>
+<loading id="loading"></loading>

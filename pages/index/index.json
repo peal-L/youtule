@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tip": "/components/tip/tip"
+  },
+  "navigationStyle": "custom"
+}

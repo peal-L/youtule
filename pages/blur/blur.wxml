@@ -1,0 +1,31 @@
+<view class="content" style="height: calc(100% - {{isX ? '100' : '80'}}px)">
+    <view class="canvas">
+        <image src="{{img.url}}" mode="widthFix" style="filter: blur({{blur / 10}}px);" bindload="imgLoad"></image>
+    </view>
+</view>
+
+<view class="cover_all {{isSetting ? 'cover_all_show' : ''}}" bindtap="toSetting"></view>
+
+<view class="setting {{isSetting ? '' : 'setting_hide'}}" style="margin-bottom: {{isX ? '115' : '95'}}px">
+    <view class="setting_name">
+        <view class="icon icon-droplet"></view>
+        <slider activeColor="#09b1b9" block-size="18" min="0" max="150" value="{{blur}}" bindchanging="setBlur" />
+    </view>
+</view>
+
+<view class="bar" style="padding-bottom: {{isX ? '40' : '20'}}px" bindtap="{{isSetting ? 'toSetting' : ''}}">
+    <view class="button choose {{img.width ? 'choose_show' : ''}}" bindtap="saveToAlbum">
+        <view class="icon icon-arrow-down2"></view>
+    </view>
+    <view class="button" bindtap="imgAdd">
+        <view class="icon icon-image"></view>
+    </view>
+    <view class="button padding {{img.width ? 'padding_show' : ''}}" catchtap="toSetting" style="background-color: {{isSetting ? '#0a5e7a' : ''}}">
+        <view class="icon icon-cog" style="{{isSetting ? 'transform: rotate(180deg)' : ''}}"></view>
+    </view>
+</view>
+
+<canvas id="canvas" canvas-id="my_canvas" style="width: {{canvas.width}}px; height: {{canvas.height}}px"></canvas>
+
+<tip id="tip"></tip>
+<loading id="loading"></loading>

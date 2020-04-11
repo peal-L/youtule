@@ -1,0 +1,24 @@
+<view class="content" style="height: calc(100% - {{isX ? '100' : '80'}}px)">
+    <view class="img-list">
+        <image wx:for="{{imgList}}" src="{{item}}" mode="widthFix"></image>
+    </view>
+</view>
+
+<view class="bar" style="padding-bottom: {{isX ? '40' : '20'}}px">
+    <view class="button choose {{img ? 'choose_show' : ''}}" bindtap="saveImg">
+        <view class="icon icon-arrow-down2"></view>
+    </view>
+    <view class="button" bindtap="imgAdd">
+        <view class="icon icon-image"></view>
+    </view>
+    <view class="button" wx:if="{{!img}}" style="opacity: 0">
+        <view class="icon icon-image"></view>
+    </view>
+</view>
+
+<canvas id="canvas" canvas-id="my_canvas" style="width: {{canvas.width}}px; height: {{canvas.height}}px"></canvas>
+<image id="img-hide" src="{{img}}" mode="widthFix" bindload="imgLoad"></image>
+
+<tip id="tip"></tip>
+<loading id="loading"></loading>
+<cut id="cut"></cut>

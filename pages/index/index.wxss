@@ -1,0 +1,129 @@
+page {
+    color: #444;
+}
+
+#background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    /* background-size: 100%;
+    background-color: #09b1b9;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: url(http://up.wawa.fm/16,06068e7e41fa0d); */
+    background: linear-gradient(-45deg, #0A5E7B 15%, #02B3BA 85%);
+}
+
+#content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#image-box {
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.images {
+    position: relative;
+    width: 100%;
+    height: calc(50vw + 110px);
+    transition: all .4s;
+    background-color: #f5f5f5;
+    border: 15px solid #f5f5f5;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow:  8px 8px 0 0 #096781;
+}
+
+.image {
+    position: absolute;
+    width: 100%;
+    height: 33.33%;
+    background-size: cover;
+    background-position: center;
+    transition: all .4s;
+    overflow: hidden;
+}
+
+.image:nth-child(1) {
+    background-image: url(http://up.wawa.fm/16,062315b8d89e6f);
+    border-radius: 10px 10px 0 0;
+}
+
+.image:nth-child(2) {
+    background-image: url(http://up.wawa.fm/16,062313c98d1c25);
+    transform: translateY(100%);
+}
+
+.image:nth-child(3) {
+    background-image: url(http://up.wawa.fm/21,062314b973f398);
+    transform: translateY(200%);
+    border-radius: 0 0 10px 10px;
+}
+
+.ninecut-line {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(white 4px, transparent 0), linear-gradient(90deg, white 4px, transparent 0);
+    background-size: 33.33% 33.33%;
+    background-position: -2px -2px;
+    transition: all .4s;
+    transform: scale(4);
+}
+
+swiper {
+    position: fixed;
+    width: 100%;
+    height: 180px;
+    bottom: 40px;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.item-view {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    /* background: linear-gradient(to right, #6758D5, #A39AF7); */
+    background-color: #f5f5f5;
+    /* background-color: #064b63; */
+    /* color: #fff; */
+    border-radius: 20px;
+    transition: all .1s;
+    box-shadow: 8px 8px 0 0 #064b63;
+}
+
+.item-view:active {
+    background-color: #e5e5e5;
+    transform: translate(8px, 8px);
+    box-shadow: 0px 0px 0 0 #064b63;
+}
+
+.item-view>view:nth-child(1) {
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.item-view>view:nth-child(2) {
+    padding-top: 10px;
+    font-size: 13px;
+}
+
+.developing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "tip": "/components/tip/tip",
+        "loading": "/components/loading/loading"
+    },
+    "navigationBarTitleText": "高斯模糊"
+}

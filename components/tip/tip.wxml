@@ -1,0 +1,1 @@
+<view class="my_tip {{!show || 'show'}}" style="color: {{color}};background-color: {{bg}};top: {{show ? (custom ? barHeight : 10) + 'px' : '-80px'}}">{{text}}</view>

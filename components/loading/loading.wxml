@@ -1,0 +1,6 @@
+<view class="loading {{!show || 'show'}}" catchtouchmove="preventTouchMove">
+  <view class="loading_content">
+    <view class="svg"></view>
+    <view class="text">{{text}}</view>
+  </view>
+</view>
