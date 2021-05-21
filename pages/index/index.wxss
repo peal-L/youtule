@@ -54,17 +54,17 @@ page {
 }
 
 .image:nth-child(1) {
-    background-image: url(http://up.wawa.fm/16,062315b8d89e6f);
+    background-image: url(https://common.peal.cc/img/bg1.png);
     border-radius: 10px 10px 0 0;
 }
 
 .image:nth-child(2) {
-    background-image: url(http://up.wawa.fm/16,062313c98d1c25);
+    background-image: url(https://common.peal.cc/img/bg2.png);
     transform: translateY(100%);
 }
 
 .image:nth-child(3) {
-    background-image: url(http://up.wawa.fm/21,062314b973f398);
+    background-image: url(https://common.peal.cc/img/bg3.png);
     transform: translateY(200%);
     border-radius: 0 0 10px 10px;
 }
